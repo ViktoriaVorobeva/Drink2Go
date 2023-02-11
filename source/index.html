@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Drink2Go</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/montserrat-regular.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-medium.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-bold.woff2" as="font">
 </head>
 
 <body class="page__body">
@@ -147,7 +150,7 @@
                 <ul class="form__item-radio">
                   <li class="form__radio-item-button">
                     <label class="form__radio-item-button-label">
-                      <input class="visually-hidden form__radio-item-button-input" type="radio" name="milk">
+                      <input class="visually-hidden form__radio-item-button-input" type="radio" name="milk" checked>
                       <span class="form__radio-item-button-label-mark"></span>
                       <span class="form__radio-item-button-label-text">Неважно</span>
                     </label>
@@ -168,7 +171,7 @@
                   </li>
                   <li class="form__radio-item-button">
                     <label class="form__radio-item-button-label">
-                      <input class="visually-hidden form__radio-item-button-input" type="radio" name="milk">
+                      <input class="visually-hidden form__radio-item-button-input" type="radio" name="milk" disabled>
                       <span class="form__radio-item-button-label-mark"></span>
                       <span class="form__radio-item-button-label-text">Без молока</span>
                     </label>
@@ -180,7 +183,7 @@
                 <ul class="form__item-checkbox">
                   <li class="form__item-checkbox-button">
                     <label class="form__item-checkbox-button-label">
-                      <input class="visually-hidden form__item-checkbox-button-input" type="checkbox" name="brazil">
+                      <input class="visually-hidden form__item-checkbox-button-input" type="checkbox" name="brazil" checked>
                       <span class="form__item-checkbox-button-label-mark"></span>
                       <span class="form__item-checkbox-button-label-text">Бразилия</span>
                     </label>
@@ -208,7 +211,7 @@
                   </li>
                   <li class="form__item-checkbox-button-item">
                     <label class="form__item-checkbox-button-label">
-                      <input class="visually-hidden form__item-checkbox-button-input" type="checkbox" name="peru">
+                      <input class="visually-hidden form__item-checkbox-button-input" type="checkbox" name="peru" disabled>
                       <span class="form__item-checkbox-button-label-mark"></span>
                       <span class="form__item-checkbox-button-label-text">Перу</span>
                     </label>
@@ -348,7 +351,7 @@
       <h3 class="visually-hidden">Навигация</h3>
       <nav class="page-footer__navigation">
         <div class="page-footer__navigation-shop shop">
-          <h3 class="shop__title">Интернет-магазин</h3>
+          <h4 class="shop__title">Интернет-магазин</h4>
           <ul class="shop__list">
             <li class="shop__item">
               <a class="shop__link" href="#">
@@ -373,7 +376,7 @@
           </ul>
         </div>
         <div class="page-footer__navigation-media media">
-          <h3 class="media__title">Медиа</h3>
+          <h4 class="media__title">Медиа</h4>
           <ul class="media__list">
             <li class="media__item">
               <a class="media__link" href="#">

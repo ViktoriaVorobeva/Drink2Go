@@ -1,0 +1,112 @@
+.header-navigation {
+  &--closed .header-navigation__toggle::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 1.5px;
+    left: 0;
+    top: 0;
+    background-color: @black;
+    box-shadow: 0 4px 0 0 @black, 0 8px 0 0 @black;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    &--closed .header-navigation__list {
+      display: none;
+    }
+
+    &--opened .header-navigation__list {
+      display: block;
+    }
+  }
+
+  &--opened .header-navigation__toggle::before,
+  &--opened .header-navigation__toggle::after {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 2px;
+    left: 0;
+    top: 5px;
+    background-color: @black;
+  }
+
+  &--opened .header-navigation__toggle::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &--opened .header-navigation__toggle::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.header-navigation__toggle-box {
+  position: relative;
+}
+
+.header-navigation__list {
+  position: absolute;
+  background-color: @white;
+  top: 60px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid @base-secondary;
+}
+
+.header-navigation__toggle {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: -19px;
+  right: 0;
+  display: block;
+  padding: 0;
+  z-index: 2;
+  background-color: @white;
+  cursor: pointer;
+  border: none;
+}
+
+.header-navigation__item {
+  padding-top: 20px;
+  padding-bottom: 21px;
+  text-align: center;
+  border-top: 1px solid @base-secondary;
+}
+
+.header-navigation__link {
+  padding: 10px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: @black;
+}
+
+.header-navigation__user-list {
+  min-width: 120px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header-navigation__user-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-navigation__user-link {
+  width: 16px;
+  height: 16px;
+  padding: 4px;
+}

@@ -1,0 +1,243 @@
+.form {
+  margin-bottom: 36px;
+}
+
+.form__range {
+  margin-bottom: 24px;
+}
+
+.form__range-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 33px;
+}
+
+.form__range-scale-box {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.form__range-scale {
+  height: 2px;
+  background-color: @light-grey;
+}
+
+.form__range-scale-bar {
+  position: absolute;
+  height: 2px;
+  background-color: @primary-lighter;
+}
+
+.form__range-scale-toggle {
+  padding: 0;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: @white;
+  border: 2px solid @primary-lighter;
+  border-radius: 50%;
+  cursor: pointer;
+  top: calc(50% - 24px/2 + 0.45px);
+
+  &--min {
+    left: 0;
+  }
+
+  &--max {
+    right: -8px;
+  }
+}
+
+.form__range-inputs {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 2px;
+    background-color: @grey;
+    top: 50%;
+    left: 49%;
+  }
+}
+
+.form__range-inputs-label {
+  display: block;
+}
+
+.form__range-inputs-input {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 118px;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  border: 2px solid @primary-lighter;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.form__item {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  margin-bottom: 24px;
+}
+
+.form__item-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 22px;
+}
+
+.form__item-radio {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.form__radio-item-button:not(:last-child) {
+  margin-bottom: 23px;
+}
+
+.form__radio-item-button-label {
+  position: relative;
+  display: block;
+  padding-left: 34px;
+}
+
+.form__radio-item-button-label-mark {
+  position: absolute;
+  left: 0;
+  top: -4px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: @white;
+  border: 2px solid @grey;
+}
+
+.form__radio-item-button-input:checked + .form__radio-item-button-label-mark {
+  border-color: @base-purple;
+}
+
+.form__radio-item-button-input:checked + .form__radio-item-button-label-mark::before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: @base-purple;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+}
+
+.form__radio-item-button-label-text {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.form__radio-item-button-input:disabled + .form__radio-item-button-label-mark {
+  border-color: @light-grey;
+}
+
+.form__radio-item-button-input:disabled ~ .form__radio-item-button-label-text {
+  color: @grey;
+}
+
+.form__item-checkbox {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.form__item-checkbox-button:not(:last-child) {
+  margin-bottom: 22px;
+}
+
+.form__item-checkbox-button-label {
+  position: relative;
+  display: block;
+  padding-left: 54px;
+}
+
+.form__item-checkbox-button-label-mark {
+  position: absolute;
+  left: 0;
+  top: -3px;
+  width: 42px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: @grey;
+}
+
+.form__item-checkbox-button-label-mark::before {
+  position: absolute;
+  content: "";
+  left: 2px;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: @white;
+}
+
+.form__item-checkbox-button-input:checked + .form__item-checkbox-button-label-mark {
+  background-color: @base-purple;
+}
+
+.form__item-checkbox-button-input:checked + .form__item-checkbox-button-label-mark::before {
+  left: 20px;
+}
+
+.form__item-checkbox-button-label-text {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.form__item-checkbox-button-input:disabled + .form__item-checkbox-button-label-mark {
+  background-color: @light-grey;
+}
+
+.form__item-checkbox-button-input:disabled + .form__item-checkbox-button-label-mark::before {
+  background-color: @lightest-grey;
+}
+
+.form__item-checkbox-button-input:disabled + .form__item-checkbox-button-label-text {
+  color: @grey;
+}
+
+.form__button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__button {
+  font-size: 13px;
+  line-height: 24px;
+  text-align: center;
+  padding: 8px 20px;
+  color: @white;
+  border: none;
+  background-color: @base-purple;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 160px;
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  &--reset {
+    color: @base-purple;
+    background-color: @white;
+    font-size: 14px;
+  }
+}

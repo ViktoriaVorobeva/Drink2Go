@@ -1,0 +1,41 @@
+.promo {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  background-color: @flat-white;
+}
+
+.promo__box {
+  margin: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 60px;
+  }
+}
+
+.promo__slider {
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.promo__slider-button {
+  position: absolute;
+  border: none;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  top: 50%;
+  background-color: @flat-white;
+
+  &--prev {
+    left: 0;
+  }
+
+  &--next {
+    right: 0;
+  }
+}

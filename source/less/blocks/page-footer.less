@@ -1,10 +1,6 @@
 .page-footer {
   margin: 0 20px;
 
-  @media (min-width: @tablet-width) {
-    margin: 0 30px;
-  }
-
   @media (min-width: @desktop-width) {
     margin: 0 60px;
   }
@@ -15,19 +11,34 @@
   padding-bottom: 30px;
   max-width: 280px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    max-width: 728px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__container {
+    display: grid;
+    grid-template-columns: repeat(3, 223px);
+    gap: 30px;
+    margin-bottom: 30px;
+  }
 }
 
 .page-footer__item {
   position: relative;
 
-  &::after {
-    position: absolute;
-    content: "";
-    width: 1000%;
-    height: 1px;
-    background-color: @base-secondary;
-    left: -20px;
-    bottom: -20px;
+  @media (max-width: @mobile-width-only) {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 1000%;
+      height: 1px;
+      background-color: @base-secondary;
+      left: -20px;
+      bottom: -20px;
+    }
   }
 }
 

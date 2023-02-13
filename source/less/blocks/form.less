@@ -1,5 +1,11 @@
 .form {
   margin-bottom: 36px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 34px;
+  }
 }
 
 .form__range {
@@ -22,12 +28,22 @@
 .form__range-scale {
   height: 2px;
   background-color: @light-grey;
+
+  @media (min-width: @tablet-width) {
+    max-width: 220px;
+    height: 4px;
+  }
 }
 
 .form__range-scale-bar {
   position: absolute;
   height: 2px;
   background-color: @primary-lighter;
+
+  @media (min-width: @tablet-width) {
+    max-width: 190px;
+    height: 4px;
+  }
 }
 
 .form__range-scale-toggle {
@@ -64,6 +80,10 @@
     top: 50%;
     left: 49%;
   }
+
+  @media (min-width: @tablet-width) {
+    min-width: 220px;
+  }
 }
 
 .form__range-inputs-label {
@@ -80,6 +100,18 @@
   border: 2px solid @primary-lighter;
   border-radius: 4px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    max-width: 92px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form__filters-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
 }
 
 .form__item {

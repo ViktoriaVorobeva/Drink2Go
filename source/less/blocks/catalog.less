@@ -2,14 +2,14 @@
   background-color: @lightest-grey;
   padding-top: 50px;
   padding-bottom: 44px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 80px;
+  }
 }
 
 .catalog__box {
   margin: 0 20px;
-
-  @media (min-width: @tablet-width) {
-    margin: 0 30px;
-  }
 
   @media (min-width: @desktop-width) {
     margin: 0 60px;
@@ -21,6 +21,10 @@
   flex-direction: column;
   max-width: 280px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    max-width: 728px;
+  }
 }
 
 .catalog__title {
@@ -30,6 +34,11 @@
   font-size: 24px;
   line-height: 36px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+  }
 }
 
 .catalog__sorting {

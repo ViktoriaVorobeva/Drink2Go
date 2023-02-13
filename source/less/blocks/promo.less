@@ -1,16 +1,26 @@
 .promo {
   position: relative;
-  padding-top: 20px;
-  padding-bottom: 60px;
   background-color: @flat-white;
+
+  @media (min-width: @tablet-width) {
+    background-color: @white;
+    height: 828px;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 640px;
+      top: 0;
+      z-index: -1;
+      background-color: @flat-white;
+    }
+  }
 }
 
 .promo__box {
   margin: 0 20px;
-
-  @media (min-width: @tablet-width) {
-    margin: 0 30px;
-  }
 
   @media (min-width: @desktop-width) {
     margin: 0 60px;
@@ -20,6 +30,14 @@
 .promo__slider {
   max-width: 280px;
   margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 60px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 728px;
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
 }
 
 .promo__slider-button {

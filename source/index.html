@@ -15,7 +15,11 @@
     <div class="page-header__box">
       <div class="page-header__container">
         <div class="page-header__logo-container">
-          <a class="page-header__logo-link" href="index.html"></a>
+          <a class="page-header__logo-link" href="index.html">
+            <p class="visually-hidden page-header__logo-text">
+              Интернет-магазин <br>кофейных напитков
+            </p>
+          </a>
         </div>
         <nav class="header-navigation header-navigation--opened header-navigation--nojs">
           <ul class="header-navigation__list">
@@ -44,12 +48,12 @@
           <ul class="header-navigation__user-list">
             <li class="header-navigation__user-item">
               <a class="header-navigation__user-link" href="#">
-                <span class="visually-hidden">Вход в личный кабинет</span>
+                <span class="visually-hidden header-navigation__user-text">Войти</span>
               </a>
             </li>
             <li class="header-navigation__user-item">
               <a class="header-navigation__user-link" href="#">
-                <span class="visually-hidden">Корзина</span>
+                <span class="visually-hidden header-navigation__user-text">Корзина</span>
               </a>
             </li>
           </ul>
@@ -77,7 +81,7 @@
             <p class="card__description">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским
               молоком —
               то,
-              что нужно для расслабления после тяжёлого рабочего дня</p>
+              что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
             <div class="card__container">
               <p class="card__old-price">295₽</p>
               <p class="card__new-price">225₽</p>
@@ -118,193 +122,198 @@
       <div class="catalog__box">
         <div class="catalog__container">
           <h2 class="catalog__title">Каталог кофейных напитков</h2>
-          <form class="catalog__form form" method="post" action="https://echo.htmlacademy.ru">
-            <div class="form__container">
-              <div class="form__range">
-                <h3 class="form__range-title">Цена</h3>
-                <div class="form__range-scale-box">
-                  <div class="form__range-scale">
-                    <div class="form__range-scale-bar" style="width: 241px">
-                      <button class="form__range-scale-toggle form__range-scale-toggle--min">
-                        <span class="visually-hidden">Изменить минимальную цену.</span>
-                      </button>
-                      <button class="form__range-scale-toggle form__range-scale-toggle--max">
-                        <span class="visually-hidden">Изменить максимальную цену.</span>
-                      </button>
+          <div class="catalog__wrapper">
+            <form class="catalog__form form" method="post" action="https://echo.htmlacademy.ru">
+              <div class="form__container">
+                <div class="form__range">
+                  <h3 class="form__range-title">Цена</h3>
+                  <div class="form__range-scale-box">
+                    <div class="form__range-scale">
+                      <div class="form__range-scale-bar" style="width: 241px">
+                        <button class="form__range-scale-toggle form__range-scale-toggle--min">
+                          <span class="visually-hidden">Изменить минимальную цену.</span>
+                        </button>
+                        <button class="form__range-scale-toggle form__range-scale-toggle--max">
+                          <span class="visually-hidden">Изменить максимальную цену.</span>
+                        </button>
+                      </div>
                     </div>
                   </div>
+                  <div class="form__range-inputs">
+                    <label class="form__range-inputs-label">
+                      <input class="form__range-inputs-input" type="number" name="min-price" value="0">
+                      <span class="visually-hidden">от</span>
+                    </label>
+                    <label class="form__range-inputs-label">
+                      <input class="form__range-inputs-input" type="number" name="max-price" value="900">
+                      <span class="visually-hidden">до</span>
+                    </label>
+                  </div>
                 </div>
-                <div class="form__range-inputs">
-                  <label class="form__range-inputs-label">
-                    <input class="form__range-inputs-input" type="number" name="min-price" value="0">
-                    <span class="visually-hidden">от</span>
-                  </label>
-                  <label class="form__range-inputs-label">
-                    <input class="form__range-inputs-input" type="number" name="max-price" value="900">
-                    <span class="visually-hidden">до</span>
-                  </label>
+                <div class="form__filters-container">
+                  <fieldset class="form__item">
+                    <legend class="form__item-title">Наличие молока</legend>
+                    <ul class="form__item-radio">
+                      <li class="form__radio-item-button">
+                        <label class="form__radio-item-button-label">
+                          <input class="visually-hidden form__radio-item-button-input" type="radio" name="milk" checked>
+                          <span class="form__radio-item-button-label-mark"></span>
+                          <span class="form__radio-item-button-label-text">Неважно</span>
+                        </label>
+                      </li>
+                      <li class="form__radio-item-button">
+                        <label class="form__radio-item-button-label">
+                          <input class="visually-hidden form__radio-item-button-input" type="radio" name="milk">
+                          <span class="form__radio-item-button-label-mark"></span>
+                          <span class="form__radio-item-button-label-text">Только животное</span>
+                        </label>
+                      </li>
+                      <li class="form__radio-item-button">
+                        <label class="form__radio-item-button-label">
+                          <input class="visually-hidden form__radio-item-button-input" type="radio" name="milk">
+                          <span class="form__radio-item-button-label-mark"></span>
+                          <span class="form__radio-item-button-label-text">Только растительное</span>
+                        </label>
+                      </li>
+                      <li class="form__radio-item-button">
+                        <label class="form__radio-item-button-label">
+                          <input class="visually-hidden form__radio-item-button-input" type="radio" name="milk"
+                            disabled>
+                          <span class="form__radio-item-button-label-mark"></span>
+                          <span class="form__radio-item-button-label-text">Без молока</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                  <fieldset class="form__item">
+                    <legend class="form__item-title">Страна произрастания</legend>
+                    <ul class="form__item-checkbox">
+                      <li class="form__item-checkbox-button">
+                        <label class="form__item-checkbox-button-label">
+                          <input class="visually-hidden form__item-checkbox-button-input" type="checkbox" name="brazil"
+                            checked>
+                          <span class="form__item-checkbox-button-label-mark"></span>
+                          <span class="form__item-checkbox-button-label-text">Бразилия</span>
+                        </label>
+                      </li>
+                      <li class="form__item-checkbox-button">
+                        <label class="form__item-checkbox-button-label">
+                          <input class="visually-hidden form__item-checkbox-button-input" type="checkbox"
+                            name="ethiopia">
+                          <span class="form__item-checkbox-button-label-mark"></span>
+                          <span class="form__item-checkbox-button-label-text">Эфиопия</span>
+                        </label>
+                      </li>
+                      <li class="form__item-checkbox-button">
+                        <label class="form__item-checkbox-button-label">
+                          <input class="visually-hidden form__item-checkbox-button-input" type="checkbox"
+                            name="colombia">
+                          <span class="form__item-checkbox-button-label-mark"></span>
+                          <span class="form__item-checkbox-button-label-text">Колумбия</span>
+                        </label>
+                      </li>
+                      <li class="form__item-checkbox-button">
+                        <label class="form__item-checkbox-button-label">
+                          <input class="visually-hidden form__item-checkbox-button-input" type="checkbox"
+                            name="costa-rica">
+                          <span class="form__item-checkbox-button-label-mark"></span>
+                          <span class="form__item-checkbox-button-label-text">Коста-Рика</span>
+                        </label>
+                      </li>
+                      <li class="form__item-checkbox-button-item">
+                        <label class="form__item-checkbox-button-label">
+                          <input class="visually-hidden form__item-checkbox-button-input" type="checkbox" name="peru"
+                            disabled>
+                          <span class="form__item-checkbox-button-label-mark"></span>
+                          <span class="form__item-checkbox-button-label-text">Перу</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </fieldset>
                 </div>
               </div>
-              <div class="form__filters-container">
-                <fieldset class="form__item">
-                  <legend class="form__item-title">Наличие молока</legend>
-                  <ul class="form__item-radio">
-                    <li class="form__radio-item-button">
-                      <label class="form__radio-item-button-label">
-                        <input class="visually-hidden form__radio-item-button-input" type="radio" name="milk" checked>
-                        <span class="form__radio-item-button-label-mark"></span>
-                        <span class="form__radio-item-button-label-text">Неважно</span>
-                      </label>
-                    </li>
-                    <li class="form__radio-item-button">
-                      <label class="form__radio-item-button-label">
-                        <input class="visually-hidden form__radio-item-button-input" type="radio" name="milk">
-                        <span class="form__radio-item-button-label-mark"></span>
-                        <span class="form__radio-item-button-label-text">Только животное</span>
-                      </label>
-                    </li>
-                    <li class="form__radio-item-button">
-                      <label class="form__radio-item-button-label">
-                        <input class="visually-hidden form__radio-item-button-input" type="radio" name="milk">
-                        <span class="form__radio-item-button-label-mark"></span>
-                        <span class="form__radio-item-button-label-text">Только растительное</span>
-                      </label>
-                    </li>
-                    <li class="form__radio-item-button">
-                      <label class="form__radio-item-button-label">
-                        <input class="visually-hidden form__radio-item-button-input" type="radio" name="milk" disabled>
-                        <span class="form__radio-item-button-label-mark"></span>
-                        <span class="form__radio-item-button-label-text">Без молока</span>
-                      </label>
-                    </li>
-                  </ul>
-                </fieldset>
-                <fieldset class="form__item">
-                  <legend class="form__item-title">Страна произрастания</legend>
-                  <ul class="form__item-checkbox">
-                    <li class="form__item-checkbox-button">
-                      <label class="form__item-checkbox-button-label">
-                        <input class="visually-hidden form__item-checkbox-button-input" type="checkbox" name="brazil"
-                          checked>
-                        <span class="form__item-checkbox-button-label-mark"></span>
-                        <span class="form__item-checkbox-button-label-text">Бразилия</span>
-                      </label>
-                    </li>
-                    <li class="form__item-checkbox-button">
-                      <label class="form__item-checkbox-button-label">
-                        <input class="visually-hidden form__item-checkbox-button-input" type="checkbox" name="ethiopia">
-                        <span class="form__item-checkbox-button-label-mark"></span>
-                        <span class="form__item-checkbox-button-label-text">Эфиопия</span>
-                      </label>
-                    </li>
-                    <li class="form__item-checkbox-button">
-                      <label class="form__item-checkbox-button-label">
-                        <input class="visually-hidden form__item-checkbox-button-input" type="checkbox" name="colombia">
-                        <span class="form__item-checkbox-button-label-mark"></span>
-                        <span class="form__item-checkbox-button-label-text">Колумбия</span>
-                      </label>
-                    </li>
-                    <li class="form__item-checkbox-button">
-                      <label class="form__item-checkbox-button-label">
-                        <input class="visually-hidden form__item-checkbox-button-input" type="checkbox"
-                          name="costa-rica">
-                        <span class="form__item-checkbox-button-label-mark"></span>
-                        <span class="form__item-checkbox-button-label-text">Коста-Рика</span>
-                      </label>
-                    </li>
-                    <li class="form__item-checkbox-button-item">
-                      <label class="form__item-checkbox-button-label">
-                        <input class="visually-hidden form__item-checkbox-button-input" type="checkbox" name="peru"
-                          disabled>
-                        <span class="form__item-checkbox-button-label-mark"></span>
-                        <span class="form__item-checkbox-button-label-text">Перу</span>
-                      </label>
-                    </li>
-                  </ul>
-                </fieldset>
+              <div class="form__button-container">
+                <button class="form__button button" type="button">Применить фильтр</button>
+                <button class="form__button form__button--reset button" type="reset">Сбросить
+                  фильтр</button>
               </div>
+            </form>
+
+
+            <div class="catalog__sorting">
+              <p class="catalog__sorting-name">Сортировка:</p>
+              <select class="catalog__sorting-select" aria-label="Сортировка">
+                <option class="catalog__sorting-option catalog__sorting-option--none">по умолчанию</option>
+                <option class="catalog__sorting-option catalog__sorting-option--high">по возрастнанию цены</option>
+                <option class="catalog__sorting-option catalog__sorting-option--lower">по убыванию цены</option>
+              </select>
             </div>
-            <div class="form__button-container">
-              <button class="form__button button" type="button">Применить фильтр</button>
-              <button class="form__button form__button--reset button" type="reset">Сбросить
-                фильтр</button>
+
+
+            <div class="catalog__product">
+              <ul class="catalog__product-list">
+                <li class="catalog__product-item product">
+                  <a class="product__link" href="#">
+                    <h3 class="product__title">Декаф Флэт Уайт</h3>
+                  </a>
+                  <p class="product__description">Кофе без кофеина из Эфиопии <br>с натуральным фермерским молоком</p>
+                  <div class="product__container">
+                    <p class="product__price">225₽</p>
+                    <a class="product__button button">В корзину</a>
+                  </div>
+                </li>
+                <li class="catalog__product-item product">
+                  <a class="product__link" href="#">
+                    <h3 class="product__title">Декаф Флэт Уайт</h3>
+                  </a>
+                  <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                  <div class="product__container">
+                    <p class="product__price">225₽</p>
+                    <a class="product__button button">В корзину</a>
+                  </div>
+                </li>
+                <li class="catalog__product-item product">
+                  <a class="product__link" href="#">
+                    <h3 class="product__title">Декаф Флэт Уайт</h3>
+                  </a>
+                  <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                  <div class="product__container">
+                    <p class="product__price">225₽</p>
+                    <a class="product__button button">В корзину</a>
+                  </div>
+                </li>
+                <li class="catalog__product-item product">
+                  <a class="product__link" href="#">
+                    <h3 class="product__title">Декаф Флэт Уайт</h3>
+                  </a>
+                  <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                  <div class="product__container">
+                    <p class="product__price">225₽</p>
+                    <a class="product__button button">В корзину</a>
+                  </div>
+                </li>
+                <li class="catalog__product-item product">
+                  <a class="product__link" href="#">
+                    <h3 class="product__title">Декаф Флэт Уайт</h3>
+                  </a>
+                  <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                  <div class="product__container">
+                    <p class="product__price">225₽</p>
+                    <a class="product__button button">В корзину</a>
+                  </div>
+                </li>
+                <li class="catalog__product-item product">
+                  <a class="product__link" href="#">
+                    <h3 class="product__title">Декаф Флэт Уайт</h3>
+                  </a>
+                  <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                  <div class="product__container">
+                    <p class="product__price">225₽</p>
+                    <a class="product__button button">В корзину</a>
+                  </div>
+                </li>
+              </ul>
             </div>
-          </form>
-
-
-          <div class="catalog__sorting">
-            <p class="catalog__sorting-name">Сортировка:</p>
-            <select class="catalog__sorting-select" aria-label="Сортировка">
-              <option class="catalog__sorting-option catalog__sorting-option--none">по умолчанию</option>
-              <option class="catalog__sorting-option catalog__sorting-option--high">по возрастнанию цены</option>
-              <option class="catalog__sorting-option catalog__sorting-option--lower">по убыванию цены</option>
-            </select>
-          </div>
-
-
-          <div class="catalog__product">
-            <ul class="catalog__product-list">
-              <li class="catalog__product-item product">
-                <a class="product__link" href="#">
-                  <h3 class="product__title">Декаф Флэт Уайт</h3>
-                </a>
-                <p class="product__description">Кофе без кофеина из Эфиопии <br>с натуральным фермерским молоком</p>
-                <div class="product__container">
-                  <p class="product__price">225₽</p>
-                  <a class="product__button button">В корзину</a>
-                </div>
-              </li>
-              <li class="catalog__product-item product">
-                <a class="product__link" href="#">
-                  <h3 class="product__title">Декаф Флэт Уайт</h3>
-                </a>
-                <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                <div class="product__container">
-                  <p class="product__price">225₽</p>
-                  <a class="product__button button">В корзину</a>
-                </div>
-              </li>
-              <li class="catalog__product-item product">
-                <a class="product__link" href="#">
-                  <h3 class="product__title">Декаф Флэт Уайт</h3>
-                </a>
-                <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                <div class="product__container">
-                  <p class="product__price">225₽</p>
-                  <a class="product__button button">В корзину</a>
-                </div>
-              </li>
-              <li class="catalog__product-item product">
-                <a class="product__link" href="#">
-                  <h3 class="product__title">Декаф Флэт Уайт</h3>
-                </a>
-                <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                <div class="product__container">
-                  <p class="product__price">225₽</p>
-                  <a class="product__button button">В корзину</a>
-                </div>
-              </li>
-              <li class="catalog__product-item product">
-                <a class="product__link" href="#">
-                  <h3 class="product__title">Декаф Флэт Уайт</h3>
-                </a>
-                <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                <div class="product__container">
-                  <p class="product__price">225₽</p>
-                  <a class="product__button button">В корзину</a>
-                </div>
-              </li>
-              <li class="catalog__product-item product">
-                <a class="product__link" href="#">
-                  <h3 class="product__title">Декаф Флэт Уайт</h3>
-                </a>
-                <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                <div class="product__container">
-                  <p class="product__price">225₽</p>
-                  <a class="product__button button">В корзину</a>
-                </div>
-              </li>
-            </ul>
           </div>
 
 
@@ -345,94 +354,96 @@
 
   <footer class="page-footer">
     <div class="page-footer__box">
-      <section class="page-footer__item socials">
-        <div class="page-footer__socials-logo">
-          <span class="visually-hidden">Логотип интернет-магазина</span>
+      <div class="page-footer__wrapper">
+        <section class="page-footer__item socials">
+          <div class="page-footer__socials-logo">
+            <span class="visually-hidden">Логотип интернет-магазина</span>
+          </div>
+          <h3 class="visually-hidden">Социальные сети</h3>
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a class="socials__link" href="#">
+                <span class="visually-hidden">ВКонтакте</span>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="#">
+                <span class="visually-hidden">Пинтерест</span>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="#">
+                <span class="visually-hidden">Одноклассники</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <div class="page-footer__container">
+          <section class="page-footer__item footer-navigation">
+            <h3 class="visually-hidden">Навигация</h3>
+            <dl class="footer-navigation__items">
+              <div class="footer-navigation__item-box">
+                <dt class="footer-navigation__title">Интернет-магазин</dt>
+                <dd class="footer-navigation__description">
+                  <ul class="footer-navigation__list">
+                    <li class="footer-navigation__item">
+                      <a class="footer-navigation__link" href="#">
+                        Каталог
+                      </a>
+                    </li>
+                    <li class="footer-navigation__item">
+                      <a class="footer-navigation__link" href="#">
+                        Доставка
+                      </a>
+                    </li>
+                    <li class="footer-navigation__item">
+                      <a class="footer-navigation__link" href="#">
+                        Способы оплаты
+                      </a>
+                    </li>
+                    <li class="footer-navigation__item">
+                      <a class="footer-navigation__link" href="#">
+                        О нас
+                      </a>
+                    </li>
+                  </ul>
+                </dd>
+              </div>
+              <div class="footer-navigation__item-box">
+                <dt class="footer-navigation__title">Медиа</dt>
+                <dd class="footer-navigation__description">
+                  <ul class="footer-navigation__list">
+                    <li class="footer-navigation__item">
+                      <a class="footer-navigation__link" href="#">
+                        Блог
+                      </a>
+                    </li>
+                    <li class="footer-navigation__item">
+                      <a class="footer-navigation__link" href="#">
+                        Информация для СМИ
+                      </a>
+                    </li>
+                    <li class="footer-navigation__item">
+                      <a class="footer-navigation__link" href="#">
+                        Правовая информация
+                      </a>
+                    </li>
+                  </ul>
+                </dd>
+              </div>
+            </dl>
+          </section>
+
+
+          <section class="page-footer__item contacts">
+            <h3 class="contacts__title">Контакты</h3>
+            <address class="contacts__address">
+              <p class="contacts__address-topogtaphy">Санкт-Петербург, набережная реки Карповки, дом 5</p>
+              <a class="contacts__address-phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+            </address>
+          </section>
         </div>
-        <h3 class="visually-hidden">Социальные сети</h3>
-        <ul class="socials__list">
-          <li class="socials__item">
-            <a class="socials__link" href="#">
-              <span class="visually-hidden">ВКонтакте</span>
-            </a>
-          </li>
-          <li class="socials__item">
-            <a class="socials__link" href="#">
-              <span class="visually-hidden">Пинтерест</span>
-            </a>
-          </li>
-          <li class="socials__item">
-            <a class="socials__link" href="#">
-              <span class="visually-hidden">Одноклассники</span>
-            </a>
-          </li>
-        </ul>
-      </section>
-
-      <div class="page-footer__container">
-        <section class="page-footer__item footer-navigation">
-          <h3 class="visually-hidden">Навигация</h3>
-          <dl class="footer-navigation__items">
-            <div class="footer-navigation__item-box">
-              <dt class="footer-navigation__title">Интернет-магазин</dt>
-              <dd class="footer-navigation__description">
-                <ul class="footer-navigation__list">
-                  <li class="footer-navigation__item">
-                    <a class="footer-navigation__link" href="#">
-                      Каталог
-                    </a>
-                  </li>
-                  <li class="footer-navigation__item">
-                    <a class="footer-navigation__link" href="#">
-                      Доставка
-                    </a>
-                  </li>
-                  <li class="footer-navigation__item">
-                    <a class="footer-navigation__link" href="#">
-                      Способы оплаты
-                    </a>
-                  </li>
-                  <li class="footer-navigation__item">
-                    <a class="footer-navigation__link" href="#">
-                      О нас
-                    </a>
-                  </li>
-                </ul>
-              </dd>
-            </div>
-            <div class="footer-navigation__item-box">
-              <dt class="footer-navigation__title">Медиа</dt>
-              <dd class="footer-navigation__description">
-                <ul class="footer-navigation__list">
-                  <li class="footer-navigation__item">
-                    <a class="footer-navigation__link" href="#">
-                      Блог
-                    </a>
-                  </li>
-                  <li class="footer-navigation__item">
-                    <a class="footer-navigation__link" href="#">
-                      Информация для СМИ
-                    </a>
-                  </li>
-                  <li class="footer-navigation__item">
-                    <a class="footer-navigation__link" href="#">
-                      Правовая информация
-                    </a>
-                  </li>
-                </ul>
-              </dd>
-            </div>
-          </dl>
-        </section>
-
-
-        <section class="page-footer__item contacts">
-          <h3 class="contacts__title">Контакты</h3>
-          <address class="contacts__address">
-            <p class="contacts__address-topogtaphy">Санкт-Петербург, набережная реки Карповки, дом 5</p>
-            <a class="contacts__address-phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
-          </address>
-        </section>
       </div>
 
       <section class="page-footer__logo">

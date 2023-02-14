@@ -4,12 +4,20 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 44px;
   }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 1/-1;
+  }
 }
 
 .form__container {
   @media (min-width: @tablet-width) {
     display: flex;
     margin-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
   }
 }
 
@@ -19,6 +27,11 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
     margin-right: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+    margin-bottom: 30px;
   }
 }
 
@@ -41,7 +54,11 @@
 
   @media (min-width: @tablet-width) {
     max-width: 220px;
-    height: 4px;
+    height: 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 318px;
   }
 }
 
@@ -53,6 +70,10 @@
   @media (min-width: @tablet-width) {
     max-width: 190px;
     height: 4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 274px;
   }
 }
 
@@ -113,6 +134,10 @@
 
   @media (min-width: @tablet-width) {
     max-width: 92px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 134px;
   }
 }
 
@@ -295,12 +320,20 @@
   box-sizing: border-box;
   width: 160px;
 
+  @media (min-width: @desktop-width) {
+    width: 150px;
+  }
+
   &:not(:last-child) {
     margin-bottom: 24px;
 
     @media (min-width: @tablet-width) {
       margin-bottom: 0;
       margin-right: 29px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 18px;
     }
   }
 

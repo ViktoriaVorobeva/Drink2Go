@@ -2,7 +2,7 @@
   margin: 0 20px;
 
   @media (min-width: @desktop-width) {
-    margin: 0 60px;
+    margin: 0 40px;
   }
 }
 
@@ -15,5 +15,32 @@
 
   @media (min-width: @tablet-width) {
     max-width: 728px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1360px;
+  }
+}
+
+.page-header__logo-link {
+  text-decoration: none;
+  display: block;
+  width: 316px;
+  height: 80px;
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__logo-text {
+    font-size: 12px;
+    line-height: 16px;
+    color: @black;
+    min-width: 126px;
+    position: relative;
+    margin: 0;
+    overflow: visible;
+    padding: 24px 20px;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
   }
 }

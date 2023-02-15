@@ -24,9 +24,12 @@
 
 .page-header__logo-link {
   text-decoration: none;
-  display: block;
-  width: 316px;
-  height: 80px;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    width: 316px;
+    height: 80px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -43,4 +46,8 @@
     height: auto;
     box-sizing: border-box;
   }
+}
+
+.header-navigation__toggle-box {
+  position: relative;
 }

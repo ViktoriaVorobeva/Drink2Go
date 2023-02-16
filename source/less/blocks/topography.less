@@ -1,9 +1,19 @@
 .topogtaphy {
-  width: auto;
-  height: 420px;
-  background-color: @light-grey;
+  position: relative;
+}
+
+.topogtaphy__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 100%;
 
   @media (min-width: @tablet-width) {
     height: 480px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 540px;
   }
 }

@@ -24,6 +24,11 @@
 
 .page-header__logo-link {
   text-decoration: none;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
 
   @media (min-width: @desktop-width) {
     display: block;
@@ -50,4 +55,14 @@
 
 .header-navigation__toggle-box {
   position: relative;
+}
+
+.page-header__logo-icon {
+  @media (min-width: @tablet-width) {
+    width: 82px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 170px;
+  }
 }

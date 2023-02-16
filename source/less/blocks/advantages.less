@@ -72,8 +72,37 @@
 
 .advantages__item {
   text-align: center;
+  position: relative;
+  padding-top: 66px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 52px;
+    height: 56px;
+    top: 0;
+    left: 40%;
+    background-size: 52px 56px;
+  }
+
+  &:first-child::before {
+    background-image: url("../../img/speed.svg");
+  }
+
+  &:nth-child(2)::before {
+    background-image: url("../../img/comfort.svg");
+  }
+
+  &:nth-child(3)::before {
+    background-image: url("../../img/energy.svg");
+  }
+
+  &:nth-child(4)::before {
+    background-image: url("../../img/ecology.svg");
+  }
 
   @media (min-width: @tablet-width) {
+    padding-top: 0;
     text-align: left;
     padding-left: 72px;
     padding-right: 11px;

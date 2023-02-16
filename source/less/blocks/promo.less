@@ -50,11 +50,8 @@
 
   @media (min-width: @desktop-width) {
     max-width: 1360px;
-    padding-top: 180px;
+    padding-top: 30px;
     padding-right: 40px;
-    display: grid;
-    grid-template-columns: 600px 624px;
-    gap: 30px;
   }
 }
 
@@ -62,16 +59,61 @@
   position: absolute;
   border: none;
   width: 20px;
-  height: 20px;
+  height: 656px;
   padding: 0;
-  top: 50%;
-  background-color: @flat-white;
+  top: 0;
+  background-color: transparent;
+  cursor: pointer;
+  background-image: url("../../img/arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 640px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 714px;
+  }
 
   &--prev {
     left: 0;
+    transform: rotate(180deg);
   }
 
   &--next {
     right: 0;
+  }
+}
+
+.promo__slider-pagination {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.promo__slider-pagination-item {
+  margin: 0 8px;
+}
+
+.promo__slider-pagination-button {
+  width: 62px;
+  height: 4px;
+  margin: 0;
+  padding: 0;
+  background-color: @white;
+  border: none;
+  cursor: pointer;
+
+  &--current {
+    background-color: @base-purple;
   }
 }

@@ -20,19 +20,39 @@
   margin-bottom: 20px;
 }
 
+.contacts__address-connect {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 13px;
+    height: 16px;
+    left: -18px;
+  }
+}
+
 .contacts__address-topogtaphy {
+  position: relative;
   font-style: normal;
   margin: 0;
   font-size: 14px;
   line-height: 20px;
   margin-bottom: 16px;
+
+  &::before {
+    background-image: url("../../img/address.svg");
+  }
 }
 
 .contacts__address-phone {
+  position: relative;
   font-style: normal;
   text-decoration: none;
   font-size: 14px;
   line-height: 20px;
   color: @black;
   cursor: pointer;
+
+  &::before {
+    background-image: url("../../img/phone.svg");
+  }
 }

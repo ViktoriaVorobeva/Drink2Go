@@ -22,6 +22,11 @@ export function processMarkup () {
     .pipe(gulp.dest('build'));
 }
 
+export function copyVendor () {
+  return gulp.src('source/vendor/**/**')
+    .pipe(gulp.dest('build'));
+}
+
 export function lintBem () {
   return gulp.src('source/*.html')
     .pipe(bemlinter());
@@ -119,6 +124,7 @@ function compileProject (done) {
     processMarkup,
     processStyles,
     processScripts,
+    copyVendor,
     optimizeVector,
     createStack,
     copyAssets,

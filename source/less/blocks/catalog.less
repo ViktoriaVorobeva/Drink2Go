@@ -170,6 +170,16 @@
   color: @base-purple;
 }
 
+.catalog__pagination-arrow {
+  &--prev {
+    transform: rotate(180deg);
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .catalog__pagination-link--arrow {
     min-width: 91px;

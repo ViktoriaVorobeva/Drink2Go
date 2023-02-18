@@ -11,7 +11,6 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
-    flex-direction: column;
     align-items: baseline;
   }
 }
@@ -41,5 +40,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 4px;
   padding: 10px;
+
+  &:hover,
+  &:focus {
+    background-color: @base-secondary;
+  }
+
+  &:active {
+    background-color: @primary-opacity;
+  }
+}
+
+.socials__link-icon {
+  fill: @grey;
+}
+
+.socials__link:hover .socials__link-icon,
+.socials__link:focus .socials__link-icon,
+.socials__link:active .socials__link-icon {
+  fill: @base-purple;
 }

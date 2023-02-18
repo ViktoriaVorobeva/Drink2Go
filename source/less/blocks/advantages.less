@@ -83,6 +83,14 @@
     top: 0;
     left: 40%;
     background-size: 52px 56px;
+
+    @media (min-width: @tablet-width) {
+      left: 0;
+    }
+
+    @media (min-width: @tablet-width) {
+      left: 42%;
+    }
   }
 
   &:first-child::before {
@@ -119,6 +127,10 @@
   @media (min-width: @desktop-width) {
     text-align: center;
     padding: 0;
+    padding-top: 76px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -142,7 +154,7 @@
   line-height: 20px;
 
   @media (min-width: @tablet-width) {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 24px;
   }
 }

@@ -1,3 +1,7 @@
+# Личный проект «Drink2Go»
+
+* Студент: [Виктория Воробьева](https://up.htmlacademy.ru/adaptive/26/user/2085701).
+
 # Краткая инструкция по работе
 
 1. [Установить node.js](https://nodejs.org/download/release/latest-v16.x/). Сборка работает на 16 версии

@@ -14,6 +14,8 @@
 
   @media (min-width: @tablet-width) {
     max-width: 728px;
+    padding-top: 42px;
+    padding-bottom: 40px;
   }
 
   @media (min-width: @desktop-width) {
@@ -28,6 +30,7 @@
     display: grid;
     grid-template-columns: repeat(3, 223px);
     gap: 30px;
+    margin-bottom: 30px;
   }
 
   @media (min-width: @desktop-width) {
@@ -39,6 +42,10 @@
 .page-footer__logo-icon {
   @media (min-width: @tablet-width) {
     width: 170px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 10px;
   }
 }
 
@@ -61,7 +68,7 @@
       width: 1000%;
       height: 1px;
       background-color: @base-secondary;
-      left: -20px;
+      left: -767px;
       bottom: -20px;
     }
   }
@@ -75,27 +82,60 @@
   text-decoration: none;
   color: @grey;
   box-sizing: border-box;
+  cursor: pointer;
+
+  @media (min-width: @desktop-width) {
+    &:not(:last-child) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 50px;
+    }
+  }
 }
 
-.page-footer__logo-link-text {
+.page-footer__logo-academy-text {
   margin: 0;
   padding: 4px;
   font-size: 12px;
   line-height: 16px;
+  color: @grey;
 }
 
 @media (min-width: @desktop-width) {
   .page-footer__logo-text {
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 14px;
+    line-height: 20px;
     color: @black;
     min-width: 126px;
     position: relative;
     margin: 0;
+    padding: 0;
     overflow: visible;
-    padding: 24px 20px;
     width: auto;
     height: auto;
     box-sizing: border-box;
   }
+}
+
+.page-footer__logo-academy {
+  fill: @grey;
+  margin-left: 4px;
+}
+
+.page-footer__logo-link:hover .page-footer__logo-text,
+.page-footer__logo-link:focus .page-footer__logo-text {
+  color: @base-purple;
+}
+
+.page-footer__logo-link:active .page-footer__logo-text {
+  color: @primary-darker;
+}
+
+.page-footer__logo-link:hover .page-footer__logo-academy,
+.page-footer__logo-link:focus .page-footer__logo-academy {
+  fill: @base-purple;
+}
+
+.page-footer__logo-link:active .page-footer__logo-academy {
+  fill: @primary-darker;
 }

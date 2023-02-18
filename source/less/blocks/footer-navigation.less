@@ -77,12 +77,13 @@
   padding: 8px;
   box-sizing: border-box;
   cursor: pointer;
-}
 
-.header-navigation__user-icon {
-  display: none;
+  &:hover,
+  &:focus {
+    color: @primary-lighter;
+  }
 
-  @media (min-width: @tablet-width) {
-    display: block;
+  &:active {
+    color: @primary-darker;
   }
 }

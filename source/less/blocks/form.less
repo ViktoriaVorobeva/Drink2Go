@@ -67,6 +67,10 @@
   height: 2px;
   background-color: @primary-lighter;
 
+  &--disabled {
+    background-color: @grey;
+  }
+
   @media (min-width: @tablet-width) {
     max-width: 190px;
     height: 4px;
@@ -94,6 +98,10 @@
 
   &--max {
     right: -8px;
+  }
+
+  &:disabled {
+    border-color: @grey;
   }
 }
 
@@ -131,6 +139,20 @@
   border: 2px solid @primary-lighter;
   border-radius: 4px;
   text-align: center;
+  appearance: textfield;
+
+  &::placeholder {
+    color: @grey;
+  }
+
+  &:focus {
+    border-color: @primary-darker;
+  }
+
+  &:disabled {
+    border-color: @light-grey;
+    color: @grey;
+  }
 
   @media (min-width: @tablet-width) {
     max-width: 92px;
@@ -139,6 +161,33 @@
   @media (min-width: @desktop-width) {
     max-width: 134px;
   }
+}
+
+.form__range-inputs-input::-webkit-outer-spin-button,
+.form__range-inputs-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.form__range-scale-toggle:hover .form__range-scale-toggle-mark,
+.form__range-scale-toggle:focus .form__range-scale-toggle-mark {
+  position: absolute;
+  top: calc(50% - 16px/2);
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: @primary-opacity;
+}
+
+.form__range-scale-toggle:active .form__range-scale-toggle-mark {
+  position: absolute;
+  top: calc(50% - 16px/2);
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: @base-purple;
 }
 
 @media (min-width: @tablet-width) {
@@ -162,6 +211,16 @@
 @media (min-width: @tablet-width) {
   .form__item + .form__item {
     margin-left: 38px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__item + .form__item {
+    margin-left: 0;
+  }
+
+  .form__item:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 
@@ -293,7 +352,7 @@
   background-color: @lightest-grey;
 }
 
-.form__item-checkbox-button-input:disabled + .form__item-checkbox-button-label-text {
+.form__item-checkbox-button-input:disabled ~ .form__item-checkbox-button-label-text {
   color: @grey;
 }
 
@@ -310,15 +369,8 @@
 
 .form__button {
   font-size: 13px;
-  line-height: 24px;
-  text-align: center;
-  padding: 8px 20px;
-  color: @white;
-  border: none;
-  background-color: @base-purple;
-  border-radius: 4px;
-  box-sizing: border-box;
   width: 160px;
+  padding: 10px 14px;
 
   @media (min-width: @desktop-width) {
     width: 150px;
@@ -341,6 +393,20 @@
     color: @base-purple;
     background-color: @white;
     font-size: 14px;
+
+    &:hover,
+    &:focus {
+      color: @white;
+    }
+
+    &:active {
+      color: @white;
+    }
+
+    &:disabled {
+      background-color: @light-grey;
+      color: @white;
+    }
   }
 
   @media (min-width: @tablet-width) {

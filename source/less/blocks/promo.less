@@ -50,8 +50,10 @@
 
   @media (min-width: @desktop-width) {
     max-width: 1360px;
-    padding-top: 30px;
+    padding-top: 180px;
     padding-right: 40px;
+    display: flex;
+    justify-content: flex-end;
   }
 }
 
@@ -64,9 +66,15 @@
   top: 0;
   background-color: transparent;
   cursor: pointer;
-  background-image: url("../../img/arrow.svg");
-  background-position: center;
-  background-repeat: no-repeat;
+
+  &:hover,
+  &:focus {
+    background-image: linear-gradient(90deg, @white 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:active {
+    background-image: linear-gradient(90deg, @primary-opacity 0%, @base-opacity 100%);
+  }
 
   @media (min-width: @tablet-width) {
     width: 80px;
@@ -79,7 +87,6 @@
 
   &--prev {
     left: 0;
-    transform: rotate(180deg);
   }
 
   &--next {
@@ -87,11 +94,36 @@
   }
 }
 
+.promo__slider-icon {
+  position: absolute;
+  top: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: @base-purple;
+  right: 30px;
+
+  &--prev {
+    transform: rotate(180deg);
+    left: 30px;
+  }
+}
+
+.promo__slider-button:disabled .promo__slider-icon {
+  fill: @grey;
+}
+
 .promo__slider-pagination {
   display: none;
   margin: 0;
   padding: 0;
   list-style-type: none;
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 
   @media (min-width: @desktop-width) {
     display: flex;
@@ -112,6 +144,15 @@
   background-color: @white;
   border: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: @primary-opacity;
+  }
+
+  &:active {
+    background-color: @base-purple;
+  }
 
   &--current {
     background-color: @base-purple;

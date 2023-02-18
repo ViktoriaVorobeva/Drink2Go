@@ -39,10 +39,9 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 32px;
-    padding: 0 80px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     text-align: left;
     font-size: 20px;
     line-height: 32px;
@@ -55,6 +54,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 
 .card__old-price {
@@ -74,17 +74,6 @@
   margin-right: 20px;
 }
 
-.card__button {
-  font-size: 16px;
-  line-height: 24px;
-  padding: 8px 20px;
-  background-color: @base-purple;
-  border-radius: 4px;
-  color: @white;
-  text-align: center;
-  text-decoration: none;
-}
-
 .card__wrapper {
   max-width: 625px;
 }
@@ -93,11 +82,20 @@
   @media (min-width: @tablet-width) {
     width: 476px;
     height: 476px;
+    position: absolute;
+    top: 352px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     width: 600px;
     height: 600px;
+    margin: 0;
     margin-right: 30px;
+    top: 30px;
+    left: 105px;
   }
 }

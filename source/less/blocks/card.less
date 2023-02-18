@@ -1,10 +1,19 @@
-.promo__card {
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
+    width: 1440px;
+  }
+
+  &--background-violet {
+    background-color: @lavender-latte;
+  }
+
+  &--background-coffee {
+    background-color: @espresso;
   }
 }
 
@@ -75,7 +84,20 @@
 }
 
 .card__wrapper {
-  max-width: 625px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    max-width: 608px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 625px;
+    margin-left: auto;
+    margin-right: 40px;
+    align-items: flex-start;
+  }
 }
 
 .card__image {
@@ -83,7 +105,7 @@
     width: 476px;
     height: 476px;
     position: absolute;
-    top: 352px;
+    top: 290px;
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -96,6 +118,6 @@
     margin: 0;
     margin-right: 30px;
     top: 30px;
-    left: 105px;
+    left: 60px;
   }
 }

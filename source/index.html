@@ -79,22 +79,9 @@
   <main class="main-container">
     <h1 class="visually-hidden">Drink2Go — интернет-магазин по продаже кофейных напитков</h1>
     <section class="promo">
-      <div class="promo__box">
-        <div class="promo__slider">
-          <button class="promo__slider-button promo__slider-button--prev" type="button">
-            <svg class="promo__slider-icon promo__slider-icon--prev" width="20" height="20" aria-hidden="true"
-              focusable="false">
-              <use href="img/icons/stack.svg#arrow"></use>
-            </svg>
-            <span class="visually-hidden">Назад</span>
-          </button>
-          <button class="promo__slider-button promo__slider-button--next" type="button">
-            <svg class="promo__slider-icon" width="20" height="20" aria-hidden="true" focusable="false">
-              <use href="img/icons/stack.svg#arrow"></use>
-            </svg>
-            <span class="visually-hidden">Вперед</span>
-          </button>
-          <div class="promo__card card">
+      <div class="swiper promo__box">
+        <div class="swiper-wrapper promo__slider">
+          <div class="swiper-slide promo__card card">
             <picture>
               <source media="(min-width: 1440px)"
                 srcset="img/promo/promo-1-desktop.png 1x, img/promo/promo-1-desktop@2x.png 2x">
@@ -119,23 +106,64 @@
               </div>
             </div>
           </div>
-          <ol class="promo__slider-pagination">
-            <li class="promo__slider-pagination-item">
-              <button class="promo__slider-pagination-button promo__slider-pagination-button--current" type="button">
-                <span class="visually-hidden">1 фото</span>
-              </button>
-            </li>
-            <li class="promo__slider-pagination-item">
-              <button class="promo__slider-pagination-button" type="button">
-                <span class="visually-hidden">2 фото</span>
-              </button>
-            </li>
-            <li class="promo__slider-pagination-item">
-              <button class="promo__slider-pagination-button" type="button">
-                <span class="visually-hidden">3 фото</span>
-              </button>
-            </li>
-          </ol>
+          <div class="swiper-slide promo__card card card--background-violet">
+            <picture>
+              <source media="(min-width: 1440px)"
+                srcset="img/promo/promo-2-desktop.png 1x, img/promo/promo-2-desktop@2x.png 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/promo/promo-2-tablet.png 1x, img/promo/promo-2-tablet.png 2x">
+              <img class="card__image" src="img/promo/promo-2-phone.png" width="280" height="270"
+                srcset="img/promo/promo-2-phone.png 1x, img/promo/promo-2-phone@2x.png 2x"
+                alt="Самый популярный напиток.">
+            </picture>
+            <div class="card__wrapper">
+              <span class="card__badge badge">Новинка!</span>
+              <h2 class="card__title">Лавандовый Латте</h2>
+              <p class="card__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и
+                лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+              <div class="card__container">
+                <p class="card__old-price">285₽</p>
+                <p class="card__new-price">265₽</p>
+                <a class="card__button button" href="#">Заказать</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide promo__card card card--background-coffee">
+            <picture>
+              <source media="(min-width: 1440px)"
+                srcset="img/promo/promo-3-desktop.png 1x, img/promo/promo-3-desktop@2x.png 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/promo/promo-3-tablet.png 1x, img/promo/promo-3-tablet.png 2x">
+              <img class="card__image" src="img/promo/promo-3-phone.png" width="280" height="270"
+                srcset="img/promo/promo-3-phone.png 1x, img/promo/promo-3-phone@2x.png 2x"
+                alt="Самый популярный напиток.">
+            </picture>
+            <div class="card__wrapper">
+              <span class="card__badge badge">Новинка!</span>
+              <h2 class="card__title">Тройной Эспрессо</h2>
+              <p class="card__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из
+                Колумбии покажет вам, что такое настоящая бодрость</p>
+              <div class="card__container">
+                <p class="card__old-price">395₽</p>
+                <p class="card__new-price">375₽</p>
+                <a class="card__button button" href="#">Заказать</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination promo__slider-pagination"></div>
+        <div class="swiper-button-prev promo__slider-button promo__slider-button--prev">
+          <svg class="promo__slider-icon promo__slider-icon--prev" width="20" height="20" aria-hidden="true"
+            focusable="false">
+            <use href="img/icons/stack.svg#arrow"></use>
+          </svg>
+          <span class="visually-hidden">Назад</span>
+        </div>
+        <div class="swiper-button-next promo__slider-button promo__slider-button--next">
+          <svg class="promo__slider-icon" width="20" height="20" aria-hidden="true" focusable="false">
+            <use href="img/icons/stack.svg#arrow"></use>
+          </svg>
+          <span class="visually-hidden">Вперед</span>
         </div>
       </div>
     </section>
@@ -553,6 +581,27 @@
     </div>
   </footer>
 
+  <script src="./swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.promo__slider-button--next',
+        prevEl: '.promo__slider-button--prev',
+      },
+    });
+
+  </script>
   <script src="./leaflet/leaflet.js"></script>
   <script src="./js/script.js" defer></script>
 </body>

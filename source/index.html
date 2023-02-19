@@ -79,15 +79,17 @@
   <main class="main-container">
     <h1 class="visually-hidden">Drink2Go — интернет-магазин по продаже кофейных напитков</h1>
     <section class="promo">
-      <div class="swiper promo__box">
-        <div class="swiper-wrapper promo__slider">
-          <div class="swiper-slide promo__card card">
+      <div class="swiper promo-swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper promo-swiper__wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide promo-swiper__slide card">
             <picture>
               <source media="(min-width: 1440px)"
                 srcset="img/promo/promo-1-desktop.png 1x, img/promo/promo-1-desktop@2x.png 2x">
               <source media="(min-width: 768px)"
                 srcset="img/promo/promo-1-tablet.png 1x, img/promo/promo-1-tablet.png 2x">
-              <img class="card__image" src="img/promo/promo-1-phone.png" width="280" height="270"
+              <img class="card__image" src="img/promo/promo-2-phone.png" width="280" height="270"
                 srcset="img/promo/promo-1-phone.png 1x, img/promo/promo-1-phone@2x.png 2x"
                 alt="Самый популярный напиток.">
             </picture>
@@ -106,7 +108,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide promo__card card card--background-violet">
+          <div class="swiper-slide promo-swiper__slide card promo-swiper__slide--background-violet">
             <picture>
               <source media="(min-width: 1440px)"
                 srcset="img/promo/promo-2-desktop.png 1x, img/promo/promo-2-desktop@2x.png 2x">
@@ -128,7 +130,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide promo__card card card--background-coffee">
+          <div class="swiper-slide card promo-swiper__slide promo-swiper__slide--background-coffee">
             <picture>
               <source media="(min-width: 1440px)"
                 srcset="img/promo/promo-3-desktop.png 1x, img/promo/promo-3-desktop@2x.png 2x">
@@ -165,6 +167,7 @@
           </svg>
           <span class="visually-hidden">Вперед</span>
         </div>
+      </div>
       </div>
     </section>
 
@@ -583,21 +586,21 @@
 
   <script src="./swiper/swiper-bundle.min.js"></script>
   <script>
-    const swiper = new Swiper('.swiper', {
+    new Swiper(".swiper", {
       // Optional parameters
-      direction: 'horizontal',
+      direction: "horizontal",
       loop: true,
 
       // If we need pagination
       pagination: {
-        el: '.swiper-pagination',
+        el: ".swiper-pagination",
         clickable: true,
       },
 
       // Navigation arrows
       navigation: {
-        nextEl: '.promo__slider-button--next',
-        prevEl: '.promo__slider-button--prev',
+        nextEl: ".promo__slider-button--next",
+        prevEl: ".promo__slider-button--prev",
       },
     });
 
